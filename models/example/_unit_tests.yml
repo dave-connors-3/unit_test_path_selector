@@ -1,0 +1,11 @@
+unit_tests:
+  - name: test_path_selector 
+    model: my_second_dbt_model
+    given: 
+      - input: ref('my_first_dbt_model')
+        rows: 
+          - {id: 1, color: 'blue'}
+          - {id: 2, color: 'red'}
+    expect: 
+      rows: 
+        - {id: 1, color: 'BLUE'}

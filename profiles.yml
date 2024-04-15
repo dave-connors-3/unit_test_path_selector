@@ -1,0 +1,12 @@
+unit_test_path_selector:
+  outputs:
+    default:
+      dbname: postgres
+      host: localhost
+      password: dbt_dave
+      port: 5432
+      schema: dbt_unit_test_selector
+      threads: 2
+      type: postgres
+      user: daveconnors
+  target: default
